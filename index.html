@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Up - Graba, Resume y Aprende</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-gradient {
+            /* Colores de Note Up: Azul principal #0073E6 */
+            background: linear-gradient(135deg, #0073E6 0%, #005BB5 100%);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4;
+        }
+        .section-subtitle {
+            @apply text-lg text-center text-gray-600 mb-12 max-w-2xl mx-auto;
+        }
+        /* Custom styles for the mobile menu button icon */
+        .lucide-icon {
+            stroke-width: 2.5px; /* Adjust stroke width for better visibility */
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" href="Noteup-photo.png">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800 flex items-center space-x-2">
+                <!-- Note Up Logo from Noteup-photo.png -->
+                <img src="Noteup-photo.png" alt="Note Up Logo" class="h-8 w-8 rounded-full">
+                <span class="text-[#0073E6]">Note</span><span class="text-gray-800">Up</span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="#nosotros" class="text-gray-600 hover:text-[#0073E6] transition duration-300">Nosotros</a>
+                <a href="#servicios" class="text-gray-600 hover:text-[#0073E6] transition duration-300">Servicios</a>
+                <a href="#uso" class="text-gray-600 hover:text-[#0073E6] transition duration-300">Cómo Funciona</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-[#0073E6] transition duration-300">Beneficios</a>
+                <a href="#contacto" class="text-gray-600 hover:text-[#0073E6] transition duration-300">Contacto</a>
+            </div>
+            <a href="#download" class="hidden lg:block bg-[#0073E6] text-white px-5 py-2 rounded-full hover:bg-[#005BB5] transition duration-300 font-semibold">
+                Descargar Note Up
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden">
+                <i data-lucide="menu" class="h-7 w-7 text-gray-700 lucide-icon"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+            <a href="#nosotros" class="block py-2 text-gray-600 hover:text-[#0073E6]">Nosotros</a>
+            <a href="#servicios" class="block py-2 text-gray-600 hover:text-[#0073E6]">Servicios</a>
+            <a href="#uso" class="block py-2 text-gray-600 hover:text-[#0073E6]">Cómo Funciona</a>
+            <a href="#beneficios" class="block py-2 text-gray-600 hover:text-[#0073E6]">Beneficios</a>
+            <a href="#contacto" class="block py-2 text-gray-600 hover:text-[#0073E6]">Contacto</a>
+            <a href="#download" class="block mt-4 text-center bg-[#0073E6] text-white px-5 py-2 rounded-full hover:bg-[#005BB5] transition duration-300 font-semibold">
+                Descargar Note Up
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-gradient text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Graba, Resume y Aprende con Note Up</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 opacity-90">Empodera tu aprendizaje con la inteligencia artificial. Toma apuntes sin distracciones y optimiza tu estudio.</p>
+                
+                <!-- Download Buttons -->
+                <div id="download" class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                    <a href="#" class="bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold py-3 px-6 rounded-lg flex items-center space-x-2 hover:bg-white/30 transition duration-300 w-full sm:w-auto justify-center">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.618 0 5.485 1.706 3.65 4.382l-2.94 5.093c-.63 1.09.206 2.454 1.485 2.454h2.723l1.834 3.178c.365.632 1.258.632 1.624 0l1.835-3.178h2.723c1.279 0 2.115-1.364 1.485-2.454l-2.94-5.093C18.515 1.706 15.382 0 12 0zM12 2c2.652 0 5.02 1.306 6.326 3.447L12 17.514 5.674 5.447C6.98 3.306 9.348 2 12 2z"></path><path d="M17.5 12c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5 4.5-2.019 4.5-4.5-2.019-4.5-4.5-4.5zm0 7c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5z"></path></svg>
+                        <span>App Store</span>
+                    </a>
+                    <a href="#" class="bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold py-3 px-6 rounded-lg flex items-center space-x-2 hover:bg-white/30 transition duration-300 w-full sm:w-auto justify-center">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18h-2v-6h2v6zm4 0h-2v-9h2v9zm4 0h-2v-12h2v12z"></path></svg>
+                        <span>Google Play</span>
+                    </a>
+                </div>
+
+                <!-- Phone Mockup -->
+                <div class="relative max-w-lg mx-auto mt-16">
+                    <div class="absolute -top-8 -left-8 w-72 h-72 bg-white/10 rounded-full filter blur-xl opacity-70"></div>
+                    <div class="absolute -bottom-8 -right-8 w-72 h-72 bg-white/10 rounded-full filter blur-xl opacity-70"></div>
+                    <!-- Using the provided image for the phone mockup -->
+                    <img src="Noteup-photo.png" alt="Note Up App en un teléfono" class="relative z-10 mx-auto rounded-[40px] shadow-2xl border-8 border-gray-800">
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros Section (Misión y Equipo) -->
+        <section id="nosotros" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Nuestra Misión</h2>
+                <p class="section-subtitle">Empoderar a los estudiantes para que puedan aprender mejor, más rápido y sin barreras, gracias a herramientas inteligentes e inclusivas.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/eeeeee/333333?text=Equipo+Note+Up" alt="Nuestro equipo Note Up" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Note Up: Más que una App, una Solución Inclusiva</h3>
+                        <p class="text-gray-700 mb-4">Note Up nació de la necesidad de simplificar la toma de apuntes y hacer el aprendizaje más accesible. Tras años de investigación y desarrollo, hemos creado una herramienta intuitiva que no solo optimiza tu estudio, sino que también apoya a estudiantes con dificultades auditivas o de aprendizaje.</p>
+                        <p class="text-gray-700">Nuestro compromiso ético incluye la privacidad de datos, acceso freemium y el desarrollo sostenible de la tecnología educativa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Section (Funcionalidades Clave) -->
+        <section id="servicios" class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Todo lo que necesitas para un aprendizaje eficiente</h2>
+                <p class="section-subtitle">Descubre las potentes funcionalidades que hemos diseñado para que alcances tus objetivos académicos y profesionales de manera más eficiente.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1: Captación Selectiva de Sonido -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="inline-block bg-[#E3F2FD] text-[#0073E6] p-4 rounded-full mb-4">
+                            <i data-lucide="mic" class="h-8 w-8 lucide-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Captación Selectiva</h3>
+                        <p class="text-gray-700">Nuestra IA filtra el audio, centrándose únicamente en la voz del ponente y eliminando ruidos externos para una transcripción limpia.</p>
+                    </div>
+                    <!-- Feature 2: Transcripción Inteligente -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="inline-block bg-[#E3F2FD] text-[#0073E6] p-4 rounded-full mb-4">
+                            <i data-lucide="file-text" class="h-8 w-8 lucide-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Transcripción Inteligente</h3>
+                        <p class="text-gray-700">Convierte el audio en texto en tiempo real, generando apuntes limpios y ordenados en formato de blog de notas.</p>
+                    </div>
+                    <!-- Feature 3: Resumen y Organización -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="inline-block bg-[#E3F2FD] text-[#0073E6] p-4 rounded-full mb-4">
+                            <i data-lucide="book-text" class="h-8 w-8 lucide-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Resumen y Organización</h3>
+                        <p class="text-gray-700">La IA organiza los apuntes, destacando ideas principales, definiendo términos técnicos y facilitando la comprensión.</p>
+                    </div>
+                     <!-- Feature 4: Creación de Presentaciones -->
+                     <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="inline-block bg-[#E3F2FD] text-[#0073E6] p-4 rounded-full mb-4">
+                            <i data-lucide="monitor" class="h-8 w-8 lucide-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Creación de Presentaciones</h3>
+                        <p class="text-gray-700">Convierte tus apuntes principales en diapositivas automáticas, ideales para estudiar o presentar.</p>
+                    </div>
+                    <!-- Feature 5: Sincronización Multiplataforma -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="inline-block bg-[#E3F2FD] text-[#0073E6] p-4 rounded-full mb-4">
+                            <i data-lucide="cloud" class="h-8 w-8 lucide-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sincronización en la Nube</h3>
+                        <p class="text-gray-700">Accede a tu información desde cualquier dispositivo. Todo se actualiza en tiempo real.</p>
+                    </div>
+                    <!-- Feature 6: Privacidad y Seguridad -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="inline-block bg-[#E3F2FD] text-[#0073E6] p-4 rounded-full mb-4">
+                            <i data-lucide="shield-check" class="h-8 w-8 lucide-icon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Seguridad y Privacidad</h3>
+                        <p class="text-gray-700">Tus datos están protegidos con encriptación de extremo a extremo. Tu privacidad es nuestra prioridad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cómo Funciona Section -->
+        <section id="uso" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Cómo funciona Note Up</h2>
+                <p class="section-subtitle">Sigue estos sencillos pasos y comienza a transformar tu aprendizaje con Note Up.</p>
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Línea de conexión para escritorio -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-[#0073E6] -translate-y-1/2 opacity-30"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center relative">
+                        <!-- Step 1: Descarga la App -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-[#0073E6] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 z-10 border-4 border-gray-50 shadow-lg">1</div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Descarga la App</h3>
+                            <p class="text-gray-700">Disponible gratis en App Store y Google Play para tu dispositivo móvil.</p>
+                        </div>
+                        <!-- Step 2: Conecta tus Audífonos y Selecciona el Ponente -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-[#0073E6] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 z-10 border-4 border-gray-50 shadow-lg">2</div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Conecta y Graba</h3>
+                            <p class="text-gray-700">Conecta tus audífonos (si son externos) o usa el micrófono del teléfono. La IA captará la voz del ponente.</p>
+                        </div>
+                        <!-- Step 3: Obtén tus Apuntes Inteligentes -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-[#0073E6] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 z-10 border-4 border-gray-50 shadow-lg">3</div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Obtén Apuntes Inteligentes</h3>
+                            <p class="text-gray-700">Recibe transcripciones precisas, resúmenes organizados y presentaciones automáticas al instante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios para el usuario Section -->
+        <section id="beneficios" class="bg-white py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Beneficios que transforman tu estudio</h2>
+                <p class="section-subtitle">Note Up te ofrece ventajas clave para mejorar tu rendimiento académico y optimizar tu tiempo.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="md:col-span-1">
+                        <ul class="space-y-6">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="clock" class="h-7 w-7 text-[#0073E6] flex-shrink-0 lucide-icon"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Ahorro de Tiempo Significativo</h3>
+                                    <p class="text-gray-700">No necesitas volver a escuchar clases enteras para repasar. Genera automáticamente material de estudio y presentaciones.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="trending-up" class="h-7 w-7 text-[#0073E6] flex-shrink-0 lucide-icon"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Mejora del Rendimiento Académico</h3>
+                                    <p class="text-gray-700">Con apuntes estructurados, resúmenes inteligentes y explicaciones de conceptos complicados, optimizarás tu aprendizaje.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="user-plus" class="h-7 w-7 text-[#0073E6] flex-shrink-0 lucide-icon"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Accesibilidad e Inclusión</h3>
+                                    <p class="text-gray-700">Facilita el acceso al conocimiento para estudiantes con dificultades auditivas o de aprendizaje, promoviendo la inclusión digital.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="h-7 w-7 text-[#0073E6] flex-shrink-0 lucide-icon"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Concentración Plena en Clase</h3>
+                                    <p class="text-gray-700">Concéntrate en comprender, sin la preocupación de tomar apuntes manualmente, ya que Note Up lo hace por ti.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1 mt-12 md:mt-0">
+                        <img src="https://placehold.co/600x400/0073E6/ffffff?text=Beneficios+NoteUp" alt="Persona estudiando con Note Up" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">¿Tienes alguna pregunta?</h2>
+                <p class="section-subtitle">Estamos aquí para ayudarte. Rellena el formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.</p>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Nombre</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0073E6]" placeholder="Tu nombre completo">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0073E6]" placeholder="tu@email.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0073E6]" placeholder="Escribe tu consulta aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#0073E6] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#005BB5] transition duration-300">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center space-x-2">
+                        <img src="Noteup-photo.png" alt="Note Up Logo" class="h-7 w-7 rounded-full">
+                        <span class="text-[#0073E6]">Note</span><span class="text-white">Up</span>
+                    </h3>
+                    <p class="text-gray-400">Revolucionando tu aprendizaje.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-200 mb-4">Navegación</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#nosotros" class="text-gray-400 hover:text-white">Nosotros</a></li>
+                        <li class="mb-2"><a href="#servicios" class="text-gray-400 hover:text-white">Servicios</a></li>
+                        <li class="mb-2"><a href="#beneficios" class="text-gray-400 hover:text-white">Beneficios</a></li>
+                        <li class="mb-2"><a href="#contacto" class="text-gray-400 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-200 mb-4">Legal</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Términos de Servicio</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-200 mb-4">Descargar</h4>
+                    <div class="flex flex-col space-y-4">
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.618 0 5.485 1.706 3.65 4.382l-2.94 5.093c-.63 1.09.206 2.454 1.485 2.454h2.723l1.834 3.178c.365.632 1.258.632 1.624 0l1.835-3.178h2.723c1.279 0 2.115-1.364 1.485-2.454l-2.94-5.093C18.515 1.706 15.382 0 12 0zM12 2c2.652 0 5.02 1.306 6.326 3.447L12 17.514 5.674 5.447C6.98 3.306 9.348 2 12 2z"></path><path d="M17.5 12c-2.481 0-4.5 2.019-4.5 4.5s2.019 4.5 4.5 4.5 4.5-2.019 4.5-4.5-2.019-4.5-4.5-4.5zm0 7c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5 2.5 1.119 2.5 2.5-1.119 2.5-2.5 2.5z"></path></svg>
+                            <span>App Store</span>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 18h-2v-6h2v6zm4 0h-2v-9h2v9zm4 0h-2v-12h2v12z"></path></svg>
+                            <span>Google Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Note Up. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                mobileMenuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons(); // Re-render icon
+        });
+
+        // Close mobile menu when a link is clicked
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
